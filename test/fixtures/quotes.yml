@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  building_type: MyString
+  amount_elevators: MyString
+  product_line: MyString
+  installation_fees: MyString
+  total_cost: MyString
+  amount_floors: MyString
+  amount_basements: MyString
+  amount_parking_spots: MyString
+  maximum_occupancy: MyString
+  amount_apartments: MyString
+  amount_companies: MyString
+  amount_corporations: MyString
+  business_hours: MyString
+  email: MyString
+  company_name: MyString
+  full_name: MyString
+  phone: MyString
+
+two:
+  building_type: MyString
+  amount_elevators: MyString
+  product_line: MyString
+  installation_fees: MyString
+  total_cost: MyString
+  amount_floors: MyString
+  amount_basements: MyString
+  amount_parking_spots: MyString
+  maximum_occupancy: MyString
+  amount_apartments: MyString
+  amount_companies: MyString
+  amount_corporations: MyString
+  business_hours: MyString
+  email: MyString
+  company_name: MyString
+  full_name: MyString
+  phone: MyString

@@ -63,3 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker'
 gem 'mysql2'
 gem 'pg'
+gem 'graphql'
+gem 'graphiql-rails', group: :development

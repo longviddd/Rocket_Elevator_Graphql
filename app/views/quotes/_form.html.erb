@@ -1,0 +1,102 @@
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :building_type %>
+    <%= form.text_field :building_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_elevators %>
+    <%= form.text_field :amount_elevators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_line %>
+    <%= form.text_field :product_line %>
+  </div>
+
+  <div class="field">
+    <%= form.label :installation_fees %>
+    <%= form.text_field :installation_fees %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_cost %>
+    <%= form.text_field :total_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_floors %>
+    <%= form.text_field :amount_floors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_basements %>
+    <%= form.text_field :amount_basements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_parking_spots %>
+    <%= form.text_field :amount_parking_spots %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maximum_occupancy %>
+    <%= form.text_field :maximum_occupancy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_apartments %>
+    <%= form.text_field :amount_apartments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_companies %>
+    <%= form.text_field :amount_companies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_corporations %>
+    <%= form.text_field :amount_corporations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_hours %>
+    <%= form.text_field :business_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
