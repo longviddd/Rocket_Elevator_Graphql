@@ -14,4 +14,6 @@ data_warehouse:
  adapter: postgresql
  host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
  port: 5432
+ production:
+    url: <%= ENV['DATABASE_URL'] %>
  

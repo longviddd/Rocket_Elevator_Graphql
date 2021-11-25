@@ -1,7 +1,6 @@
 class Address < ApplicationRecord
     has_many :customers, dependent: :destroy
     has_many :buildings, dependent: :destroy
-    establish_connection :production
 
   def to_s 
     "Address #" + self.id.to_s
