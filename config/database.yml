@@ -2,7 +2,7 @@ default: &default
  encoding: utf8
  username: codeboxx
  password: Codeboxx1!
-development:
+production:
  <<: *default
  database: JasmineGrewal
  adapter: mysql2
