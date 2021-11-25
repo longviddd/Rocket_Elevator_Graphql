@@ -16,5 +16,11 @@ module Types
     def building(id:)
       building = Building.find(id)  
     end
+    field :factIntervention, FactInterventionType, null: false do
+      argument :id, ID, required: true
+    end
+    def factIntervention(id:)
+      fact_intervention = FactIntervention.find(id)
+    end
   end
 end
