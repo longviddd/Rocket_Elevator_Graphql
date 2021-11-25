@@ -2,7 +2,7 @@ development:
   encoding: utf8
   database: relational_database
   username: root
-  password: 
+  password: Ayanishitani1987*smt
   adapter: mysql2
   port: 3306
 data_warehouse:
@@ -10,6 +10,6 @@ data_warehouse:
   adapter: postgresql
   encoding: utf8
   database: data_warehouse
-  username: longnguyen
-  password:
+  username: dreaith
+  password: Ayanishitani1987*smt
   port: 5432
