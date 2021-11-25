@@ -23,5 +23,10 @@ module Types
     def building
       Building.find(object.building_id)
     end
+    field :buildingdetails, Types::BuildingDetailType, null:true
+    def buildingdetails
+      BuildingDetail.where(building_id: object.building_id)[0]
+    end
+
   end
 end

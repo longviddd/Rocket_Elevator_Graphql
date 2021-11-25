@@ -3,6 +3,7 @@ default: &default
  username: codeboxx
  password: Codeboxx1!
 development:
+
  <<: *default
  database: JasmineGrewal
  adapter: mysql2

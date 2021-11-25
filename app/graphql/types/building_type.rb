@@ -20,5 +20,6 @@ module Types
     def customer  
       Customer.where(id: object.customer_id)[0]
     end
+
   end
 end

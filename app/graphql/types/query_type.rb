@@ -22,5 +22,11 @@ module Types
     def factIntervention(id:)
       fact_intervention = FactIntervention.find(id)
     end
+    field :employee, EmployeeType, null: false do
+      argument :id, ID, required: true
+    end
+    def employee(id:)
+      employee = Employee.find(id)
+    end
   end
 end
