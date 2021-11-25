@@ -16,12 +16,12 @@ module Types
     field :address, Types::AddressType, null:true    
     def address
       buildingObject = Building.where(id: object.building_id)[0]
-      Address.where(id: buildingObject.address_id)[0]
+      Address.find(building.address_id)
     end
 
     field :building, Types::BuildingType, null:true    
     def building
-      Building.where(id: object.building_id)[0]
+      Building.find(object.building_id)
     end
   end
 end
