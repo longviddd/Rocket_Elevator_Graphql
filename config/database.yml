@@ -2,14 +2,14 @@ default: &default
  encoding: utf8
  username: codeboxx
  password: Codeboxx1!
-development:
-
+production:
  <<: *default
  database: JasmineGrewal
  adapter: mysql2
  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
  port: 3306
 data_warehouse:
+ <<: *default
  database: jkg
  adapter: postgresql
  host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
