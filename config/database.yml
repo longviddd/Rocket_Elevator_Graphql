@@ -1,15 +1,15 @@
+default: &default
+ encoding: utf8
+ username: codeboxx
+ password: Codeboxx1!
 development:
-  encoding: utf8
-  database: relational_database
-  username: root
-  password: 
-  adapter: mysql2
-  port: 3306
+ <<: *default
+ database: JasmineGrewal
+ adapter: mysql2
+ host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+ port: 3306
 data_warehouse:
-  host: localhost
-  adapter: postgresql
-  encoding: utf8
-  database: data_warehouse
-  username: longnguyen
-  password:
-  port: 5432
+ database: jkg
+ adapter: postgresql
+ host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+ port: 5432
