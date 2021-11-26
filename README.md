@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+This Repo is the GraphQL based on the Rocket Elevator databases
 
 * Configuration
 
-* Database creation
+* Database is connected to the online mysql and the postgresql database of the app hosted on Amazon AWS.
 
-* Database initialization
+* Link to POSTMAN Json: https://www.getpostman.com/collections/204d19baa7cd36852db7
 
-* How to run the test suite
+* Link to API: https://lit-bayou-27452.herokuapp.com/graphql
 
-* Services (job queues, cache servers, search engines, etc.)
+* Instruction: For the Update one, you have to change the status and the id parameters in the body in order to specify which one you want to change and what you want to change to
+For the Retrieval one, you have to change the id to the one you want to get in the body. 
 
-* Deployment instructions
-
-* ...
