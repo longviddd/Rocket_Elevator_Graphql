@@ -46,9 +46,9 @@ module Types
     def elevator(id:)
       elevator = Elevator.find(id)
     end
-    field :onlineElevator, [ElevatorType], null: false
-    def onlineElevator
-      Elevator.where(status: "Online")
+    field :offlineElevator, [ElevatorType], null: false
+    def offlineElevator
+      Elevator.where.not(status: "Online")
     end
       
   end
