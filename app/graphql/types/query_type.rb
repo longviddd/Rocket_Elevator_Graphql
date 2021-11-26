@@ -61,6 +61,26 @@ module Types
       end
       return_leads
     end
+    field :buildingsWithIntervention, [BuildingType], null: false
+    def buildingsWithIntervention
+      return_buildings = Array.new
+      Elevator.all.each do |elevator|
+        if elevator.status.to_s == "Intervention" && return_buildings.include?(elevator.column.battery.building) == false
+          return_buildings.append(elevator.column.battery.building)
+        end
+      end
+      Column.all.each do |column|
+        if column.status.to_s == "Intervention" && return_buildings.include?(column.battery.building) == false
+          return_buildings.append(column.battery.building)
+        end
+      end
+      Battery.all.each do |battery|
+        if battery.status.to_s == "Intervention" && return_buildings.include?(battery.building) == false
+          return_buildings.append(battery.building)
+        end
+      end
+      return_buildings
+    end
     # field :leads, [LeadType], null:false
     # def leads
     #   Lead.all
