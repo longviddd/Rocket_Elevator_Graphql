@@ -28,5 +28,11 @@ module Types
     def employee(id:)
       employee = Employee.find(id)
     end
+    field :battery, BatteryType, null: false do
+      argument :id, ID, required: true
+    end
+    def battery(id:)
+      battery = Battery.find(id)
+    end
   end
 end
