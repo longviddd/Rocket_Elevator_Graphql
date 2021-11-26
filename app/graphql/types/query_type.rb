@@ -40,5 +40,11 @@ module Types
     def column(id:)
       column = Column.find(id)
     end
+    field :elevator, ElevatorType, null:false do
+      argument :id, ID, required: true
+    end
+    def elevator(id:)
+      elevator = Elevator.find(id)
+    end
   end
 end
