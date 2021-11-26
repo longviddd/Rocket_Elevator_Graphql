@@ -34,5 +34,11 @@ module Types
     def battery(id:)
       battery = Battery.find(id)
     end
+    field :column, ColumnType, null:false do
+      argument :id, ID, required: true
+    end
+    def column(id:)
+      column = Column.find(id)
+    end
   end
 end
