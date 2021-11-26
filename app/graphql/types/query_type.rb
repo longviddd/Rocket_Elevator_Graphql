@@ -50,6 +50,21 @@ module Types
     def offlineElevator
       Elevator.where.not(status: "Online")
     end
+    field :leadBeforeThirtyDaysThatBecomeCustomer, [LeadType], null: false
+    def leadBeforeThirtyDaysThatBecomeCustomer
+      return_leads = Array.new
+      relevant_leads = Lead.where.not("date_of_creation < ?", 31.days.ago)
+      relevant_leads.each do |lead|
+        if Customer.where(:email_of_the_company_contact => lead.email).blank? == true
+          return_leads.append(lead)
+        end
+      end
+      return_leads
+    end
+    # field :leads, [LeadType], null:false
+    # def leads
+    #   Lead.all
+    # end
       
   end
 end
