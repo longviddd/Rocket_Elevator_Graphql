@@ -81,6 +81,18 @@ module Types
       end
       return_buildings
     end
+    field :interventionsPending, [InterventionType], null: false
+    def interventionsPending
+      pending_interventions = Intervention.where(status: "Pending")
+    end
+    field :interventionsComplete, [InterventionType], null: false
+    def interventionsComplete
+      complete_interventions = Intervention.where(status: "Completed")
+    end
+    field :interventionsInProgress, [InterventionType], null: false
+    def interventionsInProgress
+      inProgress_interventions = Intervention.where(status: "InProgress")
+    end
     # field :leads, [LeadType], null:false
     # def leads
     #   Lead.all
